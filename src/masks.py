@@ -15,7 +15,8 @@ def get_mask_card_number(card_number: str) -> str:
 
 def get_mask_account(account_number: str) -> str:
     """Функция маскировки номера банковского счета"""
-    return "**" + account_number[16:]
+    if len(account_number) == 20:
+        return "**" + account_number[16:]
 
 
 # print(get_mask_card_number("7000792289606361"))
