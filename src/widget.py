@@ -4,22 +4,22 @@ from src.masks import get_mask_account, get_mask_card_number
 def mask_account_card(bank_account: str) -> str:
     """Функция, которая обрабатывает информацию о картах и счетах"""
     if "Счет" in bank_account:
-        bank_account_account = get_mask_account(bank_account[5: ])
+        bank_account_account = get_mask_account(bank_account[5:])
         return f"Счет {bank_account_account}"
     elif "Maestro" in bank_account:
-        bank_account_card = get_mask_card_number(bank_account[8: ])
+        bank_account_card = get_mask_card_number(bank_account[8:])
         return f"Maestro {bank_account_card}"
     elif "MasterCard" in bank_account:
-        bank_account_card = get_mask_card_number(bank_account[11: ])
+        bank_account_card = get_mask_card_number(bank_account[11:])
         return f"MasterCard {bank_account_card}"
     elif "Visa Classic" in bank_account:
-        bank_account_card = get_mask_card_number(bank_account[13: ])
+        bank_account_card = get_mask_card_number(bank_account[13:])
         return f"Visa Classic {bank_account_card}"
     elif "Visa Platinum" in bank_account:
-        bank_account_card = get_mask_card_number(bank_account[14: ])
+        bank_account_card = get_mask_card_number(bank_account[14:])
         return f"Visa Platinum {bank_account_card}"
     elif "Visa Gold" in bank_account:
-        bank_account_card = get_mask_card_number(bank_account[10: ])
+        bank_account_card = get_mask_card_number(bank_account[10:])
         return f"Visa Gold {bank_account_card}"
 
 
