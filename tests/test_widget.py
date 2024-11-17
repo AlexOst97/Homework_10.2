@@ -3,8 +3,8 @@ import pytest
 from src.widget import get_date, mask_account_card
 
 
-def test_mask_account_card():
-    assert mask_account_card("Счет 64686473678894779589") == "Счет **9589"
+def test_mask_account_card(account_card):
+    assert mask_account_card("Счет 64686473678894779589") == account_card
     assert mask_account_card("Счет 35383033474447895560") == "Счет **5560"
     assert mask_account_card("Счет 73654108430135874305") == "Счет **4305"
     assert (
@@ -34,10 +34,9 @@ def test_mask_account_card():
         assert mask_account_card("Visa Gold 1")
 
 
-def test_get_date():
-    assert get_date("2024-06-05T02:26:18.671407") == "05.06.2024"
+def test_get_date(date):
+    assert get_date("2024-06-05T02:26:18.671407") == date
     assert get_date("2024-11-20T02:26:18.671407") == "20.11.2024"
-
     with pytest.raises(AssertionError):
         assert get_date(" ")
         assert get_date("123")
