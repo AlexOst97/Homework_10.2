@@ -13,7 +13,11 @@ def filter_by_state(list_of_dictionaries: list[dict[str, Any]], keyword="EXECUTE
 print(
     filter_by_state(
         [
-            {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+            {
+                "id": 41428829,
+                "state": "EXECUTED",
+                "date": "2019-07-03T18:35:29.512364"
+            },
             {
                 "id": 939719570,
                 "state": "EXECUTED",
@@ -43,7 +47,10 @@ def sort_by_date(enter_date: list[dict[str, Any]], reverse=True) -> list[dict[st
 print(
     sort_by_date(
         [
-            {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+            {
+                "id": 41428829,
+             "state": "EXECUTED",
+             "date": "2019-07-03T18:35:29.512364"},
             {
                 "id": 939719570,
                 "state": "EXECUTED",
